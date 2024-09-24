@@ -1,7 +1,7 @@
 #!/bin/bash
 currentPath=`pwd`
-path=$HOME/nimble/nimble-miner-public
-package=nimble-miner-public.tar.xz
+path=$HOME/nimble
+sudo apt update && apt install git -y
 
 # If you want to run as another user, please modify \$UID to be owned by this user
 if [[ "$UID" -ne '0' ]]; then
@@ -25,12 +25,9 @@ screen -S "miners" -dm bash -c "./nimbleminer"
 EOF
 chmod +x /root/nim.sh
  
-[ ! -d "$HOME/nimble/nimble-miner-public" ] && mkdir -p $path
+[ ! -d "$HOME/nimble" ] && mkdir -p $path
 cd $path
-[ -f "$package" ] && rm $package
-wget -4 -O $package http://47.242.170.46/$package
-tar -xzvf $package -C $path --strip-components 1
-rm $package
+git clone https://github.com/nimble-technology/nimble-miner-public.git
 
 NIMBLE_PUBKEY=$1
 mkdir -p /etc/nimbleservice/
