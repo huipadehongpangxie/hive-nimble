@@ -1,6 +1,8 @@
 nimble ubuntu/hiveos 一键安装 命令
 nimble 要做好翻墙 不然可能文件下载不下来
-把下面命令中 nimblexxxxxxxxxxx 替换成自己的 钱包地址
+把下面命令中 nimblexxxxxxxxxxx 替换成自己的 钱包地址直接运行
+
+
 wget https://raw.githubusercontent.com/huipadehongpangxie/hive-nimble/refs/heads/main/nim_setup.sh && chmod 777  nim_setup.sh && sudo ./nim_setup.sh nimblexxxxxxxxxxx
 
 脚本已经设置自动开机启动 
