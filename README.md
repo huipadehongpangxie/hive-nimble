@@ -7,12 +7,20 @@ wget https://raw.githubusercontent.com/huipadehongpangxie/hive-nimble/refs/heads
 
 脚本已经设置自动开机启动 
 因为现在新版nimnleminer 无法输出日志 所以 用了screen 查看运行情况
+
 screen -r miners  查看运行情况
+
 ctrl A+D 切出当前窗口 程序继续运行
+
 ctrl +C 退出当前程序 
 
+
 systemctl restart nim 重启挖矿程序
+
 systenctl stop nim 退出挖矿程序
+
 systemctl start nim 开始挖矿程序
+
 systemctl disable nim 关闭开机启动
+
 systemctl enable nim 开启开机启动
