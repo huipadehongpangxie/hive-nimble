@@ -37,7 +37,7 @@ NIMBLE_PUBKEY=$1
 EOF
 fi
 
-chmod +x $path/nimbleminer
+chmod +x $path/nimble-miner-public/nimbleminer
 
 cat << EOF > /etc/systemd/system/nim.service
 [Unit]
